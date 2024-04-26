@@ -6,27 +6,28 @@
   <title>Media Services Company</title>
   <style>
     body {
-      background-color: #f4b41a;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
     }
 
-    nav {
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #333;
-      padding: 1rem;
     }
 
-    nav a {
+    .header a {
       color: #fff;
       text-decoration: none;
-      font-size: 1.5rem;
-      margin-left: 1rem;
+      margin-right: 20px;
     }
 
-    nav button {
+    .header button {
       background-color: #4CAF50;
       color: white;
       padding: 14px 20px;
@@ -34,105 +35,132 @@
       border: none;
       cursor: pointer;
       width: 100px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      border-radius: 4px;
     }
 
-    nav button:hover {
-      background-color: #444;
+    .header button:hover {
+      opacity: 0.8;
     }
 
-    .hero {
-      background-image: url("media-services.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
+    .body {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      justify-content: space-around;
+      padding: 30px 0;
+    }
+
+    .media-service {
+      width: 30%;
+    }
+
+    .media-service h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .media-service p {
+      line-height: 1.5;
+    }
+
+    .media-image {
+      width: 40%;
+    }
+
+    .media-image img {
+      width: 100%;
+    }
+
+    .footer {
+      background-color: #333;
       color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .form-container {
+      width: 30%;
+      margin: 0 auto;
+    }
+
+    .form-header {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form {
+      display: flex;
       flex-direction: column;
     }
 
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
+    .form label {
+      margin-bottom: 5px;
     }
 
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    .form input[type="text"],
+    .form input[type="email"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
-    .hero p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+    .form textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .cta-button {
+    .form button {
       background-color: #4CAF50;
       color: white;
       padding: 14px 20px;
       margin: 8px 0;
       border: none;
       cursor: pointer;
-      width: 150px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      border-radius: 4px;
+      width: 100px;
     }
 
-    .cta-button:hover {
-      background-color: #444;
+    .form button:hover {
+      opacity: 0.8;
     }
-
-    .media-services {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 3rem 0;
-      background-color: #fff;
-      box-shadow: 0px 2px 3px #ccc;
-    }
-
-    .media-service {
-      text-align: center;
-      flex-basis: 30%;
-    }
-
-    .media-service h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .media-service p {
-      font-size: 1.2rem;
-      line-height: 1.5;
-      margin-bottom: 2rem;
-    }
-
-    .media-image {
-      width: 100%;
-    }
-
-    .media-image img {
-      width: 100%;
-      height: auto;
-    }
-
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-      border-top: 5px solid #f1f1f1;
-      box-shadow: 0px -2
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="#">Home</a>
+    <button>Product</button>
+  </header>
+  <div class="body">
+    <div class="media-service">
+      <h2>Our Media Services</h2>
+      <p>We provide high-quality media services, including video production, photography, and graphic design. Our team of experienced professionals is dedicated to delivering exceptional results that exceed your expectations.</p>
+      <p>With a focus on creativity, innovation, and attention to detail, we helpbusinesses and individuals tell their stories in a compelling and engaging way. Whether you need a promotional video, product photography, or a new logo design, we have the skills and expertise to bring your vision to life.</p>
+    </div>
+    <div class="media-image">
+      <img src="https://source.unsplash.com/random/800x600" alt="Media Services Image">
+    </div>
+  </div>
+  <footer class="footer">
+    <p>Copyright &copy; 2023 Media Services Company. All rights reserved.</p>
+    <a href="#">Privacy Policy</a>
+  </footer>
+  <div class="form-container">
+    <h2 class="form-header">Contact Us</h2>
+    <form class="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
